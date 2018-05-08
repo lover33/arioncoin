@@ -586,7 +586,7 @@ bool CMasternodeBroadcast::CheckOutpoint(int& nDos)
     }
 
     // verify that sig time is legit in past
-    // should be at least not earlier than block when 1000 ARION tx got nMasternodeMinimumConfirmations
+    // should be at least not earlier than block when 5000 ARION tx got nMasternodeMinimumConfirmations
     uint256 hashBlock = uint256();
     CTransaction tx2;
     GetTransaction(vin.prevout.hash, tx2, Params().GetConsensus(), hashBlock, true);
